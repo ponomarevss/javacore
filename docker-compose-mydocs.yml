@@ -1,0 +1,7 @@
+version: '3'
+services:
+  documentation-generator:
+    image: bellsoft/liberica-openjdk-alpine:18.0.2.1-1
+    volumes:
+      - ./src:/app/src
+    command: javadoc -d mydocs -sourcepath src -cp ./outjavacore -subpackages ru
